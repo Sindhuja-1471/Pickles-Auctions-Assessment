@@ -1,0 +1,13 @@
+<section class="container-fluid container-section font--roboto default--text-color body-text--font-size">
+    <article class="sticky-header">
+        <app-header></app-header>
+    </article>
+
+    <article class="d-flex flex-fill app-content p-3">
+        <main
+            class="flex-fill d-flex flex-column"
+            [ngClass]="authService.isAuthenticated() ? 'initial-margin' : 'mt-0'">
+            <router-outlet></router-outlet>
+        </main>
+    </article>
+</section>
